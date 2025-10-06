@@ -11,6 +11,11 @@ document.getElementById("contactForm").addEventListener('submit', (e) =>{
         return;
     };
 
+    if(name.length===2){
+        alert("Invalid name");
+        return;
+    }
+
     const emailPattern = /^[a-zA-Z0-9.-_]+@[a-zA-Z.-]+\.[a-zA-Z]{2,}$/;
     if(!email.match(emailPattern)) {
         alert("Enter a valid email address");
